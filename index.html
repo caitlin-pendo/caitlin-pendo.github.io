@@ -395,6 +395,16 @@
                                     Logout
                                 </a>
                             </div>
+                            <script>
+  document.getElementById("profile").addEventListener("click", function(e) {
+    e.preventDefault(); // Prevents page jump or reload
+    if (window.pendo && pendo.BuildingBlocks) {
+      pendo.BuildingBlocks.BuildingBlockResourceCenter.getResourceCenter().show();
+    } else {
+      console.warn("Pendo is not yet loaded.");
+    }
+  });
+</script>
                         </li>
 
                     </ul>
